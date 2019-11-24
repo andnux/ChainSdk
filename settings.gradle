@@ -1,0 +1,2 @@
+include ':app', ':tron', ':core', ':eos', ':eth', ':vsys', ':btc'
+rootProject.name='ChainSdk'
