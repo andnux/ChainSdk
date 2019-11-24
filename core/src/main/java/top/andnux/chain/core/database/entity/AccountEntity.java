@@ -21,6 +21,14 @@ public class AccountEntity {
     private String name;
     @ColumnInfo(name = "icon")
     private String icon;
+    @ColumnInfo(name = "private_active_key")
+    private String privateActiveKey;
+    @ColumnInfo(name = "public_active_key")
+    private String publicActiveKey;
+    @ColumnInfo(name = "private_owner_key")
+    private String privateOwnerKey;
+    @ColumnInfo(name = "public_owner_key")
+    private String publicOwnerKey;
     @ColumnInfo(name = "private_key")
     private String privateKey;
     @ColumnInfo(name = "public_key")
@@ -46,6 +54,38 @@ public class AccountEntity {
     private Date createTime;
     @ColumnInfo(name = "update_time")
     private Date updateTime;
+
+    public String getPrivateActiveKey() {
+        return privateActiveKey;
+    }
+
+    public void setPrivateActiveKey(String privateActiveKey) {
+        this.privateActiveKey = privateActiveKey;
+    }
+
+    public String getPublicActiveKey() {
+        return publicActiveKey;
+    }
+
+    public void setPublicActiveKey(String publicActiveKey) {
+        this.publicActiveKey = publicActiveKey;
+    }
+
+    public String getPrivateOwnerKey() {
+        return privateOwnerKey;
+    }
+
+    public void setPrivateOwnerKey(String privateOwnerKey) {
+        this.privateOwnerKey = privateOwnerKey;
+    }
+
+    public String getPublicOwnerKey() {
+        return publicOwnerKey;
+    }
+
+    public void setPublicOwnerKey(String publicOwnerKey) {
+        this.publicOwnerKey = publicOwnerKey;
+    }
 
     public String getAddress() {
         return address;

@@ -1,6 +1,7 @@
 package top.andnux.chain.core;
 
 import top.andnux.chain.core.database.entity.AccountEntity;
+import top.andnux.chain.core.database.entity.WalletEntity;
 
 public interface Chain {
 
@@ -19,7 +20,16 @@ public interface Chain {
      * @param objects
      * @return
      */
-    AccountEntity createAccount(Object... objects);
+    AccountEntity createAccount(WalletEntity entity,Object... objects) throws Exception;
+
+
+    /**
+     * 创建帐号用助记词
+     *
+     * @param objects
+     * @return
+     */
+    AccountEntity createAccountByMnemonic(WalletEntity entity,Object... objects) throws Exception;
 
     /**
      * 私钥导入
@@ -28,7 +38,7 @@ public interface Chain {
      * @param objects
      * @return
      */
-    AccountEntity importAccountByPrivateKey(String privateKey, Object... objects);
+    AccountEntity importAccountByPrivateKey(WalletEntity entity,String privateKey, Object... objects)throws Exception;
 
     /**
      * 公钥导入
@@ -36,7 +46,7 @@ public interface Chain {
      * @param publicKey
      * @return
      */
-    AccountEntity importAccountByPublicKey(String publicKey, Object... objects);
+    AccountEntity importAccountByPublicKey(WalletEntity entity,String publicKey, Object... objects)throws Exception;
 
 
     /**
@@ -46,5 +56,5 @@ public interface Chain {
      * @param objects
      * @return
      */
-    AccountEntity importAccountByMnemonic(String publicKey, Object... objects);
+    AccountEntity importAccountByMnemonic(WalletEntity entity,String publicKey, Object... objects)throws Exception;
 }
