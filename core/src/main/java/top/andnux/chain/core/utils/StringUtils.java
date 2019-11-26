@@ -1,4 +1,4 @@
-package top.andnux.chain.core;
+package top.andnux.chain.core.utils;
 
 import android.text.TextUtils;
 

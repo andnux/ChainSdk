@@ -24,6 +24,11 @@ public class TronChain implements Chain {
     }
 
     @Override
+    public AccountEntity createAccountByMnemonic(WalletEntity entity, Object... objects) throws Exception {
+        return null;
+    }
+
+    @Override
     public AccountEntity importAccountByPrivateKey(WalletEntity entity,String privateKey, Object... objects)throws Exception {
         return null;
     }

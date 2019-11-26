@@ -27,6 +27,7 @@ android {
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
     api 'androidx.appcompat:appcompat:1.1.0'
+    api 'org.bitcoinj:bitcoinj-core:0.15.5'
     api 'org.web3j:core:4.2.0-android'
     api project(path: ':core')
     testImplementation 'junit:junit:4.12'

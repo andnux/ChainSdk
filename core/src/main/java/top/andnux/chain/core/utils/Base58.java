@@ -1,4 +1,4 @@
-package top.andnux.chain.core;
+package top.andnux.chain.core.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;

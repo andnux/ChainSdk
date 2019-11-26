@@ -2,7 +2,7 @@ package top.andnux.chain.eos;
 
 import top.andnux.chain.core.AppExecutors;
 import top.andnux.chain.core.Measure;
-import top.andnux.chain.eos.api.Rpc;
+import top.andnux.chain.eos.api.EosRpc;
 
 public class EosMeasure implements Measure {
     @Override
@@ -11,7 +11,7 @@ public class EosMeasure implements Measure {
         long start = System.currentTimeMillis();
         executors.networkIO().execute(() -> {
             try {
-                new Rpc(url).getChainInfo();
+                new EosRpc(url).getChainInfo();
                 long end = System.currentTimeMillis();
                 executors.mainThread().execute(() -> {
                     if (callBack == null) return;

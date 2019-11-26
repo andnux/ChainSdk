@@ -17,10 +17,11 @@ public interface Chain {
     /**
      * 创建帐号
      *
+     * @param password
      * @param objects
      * @return
      */
-    AccountEntity createAccount(WalletEntity entity,Object... objects) throws Exception;
+    AccountEntity createAccount(WalletEntity entity, String password, Object... objects) throws Exception;
 
 
     /**
@@ -29,7 +30,7 @@ public interface Chain {
      * @param objects
      * @return
      */
-    AccountEntity createAccountByMnemonic(WalletEntity entity,Object... objects) throws Exception;
+    AccountEntity createAccountByMnemonic(WalletEntity entity, String password, Object... objects) throws Exception;
 
     /**
      * 私钥导入
@@ -38,7 +39,7 @@ public interface Chain {
      * @param objects
      * @return
      */
-    AccountEntity importAccountByPrivateKey(WalletEntity entity,String privateKey, Object... objects)throws Exception;
+    AccountEntity importAccountByPrivateKey(WalletEntity entity, String password, String privateKey, Object... objects) throws Exception;
 
     /**
      * 公钥导入
@@ -46,7 +47,7 @@ public interface Chain {
      * @param publicKey
      * @return
      */
-    AccountEntity importAccountByPublicKey(WalletEntity entity,String publicKey, Object... objects)throws Exception;
+    AccountEntity importAccountByPublicKey(WalletEntity entity, String password, String publicKey, Object... objects) throws Exception;
 
 
     /**
@@ -56,5 +57,5 @@ public interface Chain {
      * @param objects
      * @return
      */
-    AccountEntity importAccountByMnemonic(WalletEntity entity,String publicKey, Object... objects)throws Exception;
+    AccountEntity importAccountByMnemonic(WalletEntity entity, String password, String publicKey, Object... objects) throws Exception;
 }

@@ -33,14 +33,14 @@ import top.andnux.chain.eos.ese.DataType;
 import top.andnux.chain.eos.ese.Ese;
 
 
-public class Rpc {
+public class EosRpc {
 
     private final RpcService rpcService;
 
     private SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss",
             Locale.getDefault());
 
-    public Rpc(String baseUrl) {
+    public EosRpc(String baseUrl) {
         dateFormatter.setTimeZone(TimeZone.getTimeZone("UTC"));
         rpcService = Generator.createService(RpcService.class, baseUrl);
     }
